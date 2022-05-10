@@ -816,6 +816,12 @@ width: 80vw;
   font-size: 1.2rem;
 }
 
+.description__service{
+  list-style-image:url(../img/SVG/SVG/logviñ.svg);
+  text-align: left;
+  margin-left: 1.5rem;
+}
+
 /*=============== PLACES ===============*/
 .place__card, .place__img {
   height: 230px;
@@ -1053,6 +1059,16 @@ width: 80vw;
 
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices */
+@media screen and (min-width: 341px) and (max-width: 567px){
+ 
+  .investt__container{
+    grid-template-columns: auto;
+  }
+  .invest__data-subtitle{
+    font-size: 1rem;
+  }
+   
+  }
 @media screen and (max-width: 340px) {
   .place__container {
     grid-template-columns: max-content;
@@ -1071,10 +1087,17 @@ width: 80vw;
     width: 190px;
     padding: 1rem;
   }
+  .investt__container{
+    grid-template-columns: auto;
+  }
   .experience__img,
   .video__container {
     padding: 0;
   }
+  .invest__data-subtitle{
+    font-size: 1rem;
+  }
+   
 }
 
 /* For medium devices */
@@ -1091,6 +1114,13 @@ width: 80vw;
     width: 470px;
     margin: 0 auto;
   }
+  .investt__container{
+    grid-template-columns: auto;
+  }
+  .invest__data-subtitle{
+    font-size: 1.5rem;
+  }
+   
 }
 
 @media screen and (min-width: 768px) {
@@ -1205,6 +1235,14 @@ width: 80vw;
     flex-direction: row;
     justify-content: space-between;
   }
+  .investt__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .invest__data-subtitle{
+    font-size: 2.5rem;
+  }
+   
+  
 }
 
 /* For large devices */
