@@ -8,10 +8,18 @@
  font-family: "Poppins", sans-serif;
 }
 .encabezado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 80px;
  text-align: center;
- padding: 20px 0;
+ padding: 20px 20px;
  background-color: #f3f3f3;
+}
+.encabezado p{
+  text-align: center;
+  width: 70%;
 }
 .galeria {
  display: flex;
@@ -60,6 +68,9 @@ opacity: 0%;
  box-shadow: 0 0 10px 0;
  background-color: rgba(0, 0, 0, 0.5);
  transform: scale(1.1);
+}
+.columna img:nth-child(2){
+  padding-top: 70px;
 }
 .overlay {
  position: fixed;
