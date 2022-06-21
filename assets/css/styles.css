@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700;800;900&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -300,6 +300,9 @@ input {
 }
 
 /*=============== HOME ===============*/
+.home{
+  background-color: rgb(27, 27, 27);
+}
 .home__img {
   position: absolute;
   top: 0;
@@ -308,6 +311,7 @@ input {
   height: 100vh;
   object-fit: cover;
   object-position: 83%;
+  filter: opacity(50%);
 }
 
 .home__container {
@@ -329,13 +333,14 @@ input {
   display: block;
   font-weight: var(--font-semi-bold);
   margin-bottom: var(--mb-0-75);
-  color: var(--first-color);
+  color: var(--body-color);
   font-size: var(--medium-font-size);
+  letter-spacing: 3px;
 }
 
 .home__data-title {
   font-size: var(--biggest-font-size);
-  font-weight: var(--font-medium);
+  font-weight: 900;
   margin-bottom: var(--mb-0-15);
   
 }
@@ -395,6 +400,7 @@ box-shadow: 3px 6px 7px -2px rgba(4,3,26,0.68);
 
 /*=============== BUTTONS ===============*/
 .button {
+  margin-top: 1rem;
   display: inline-block;
   background-color: var(--first-color);
   color: var(--white-color);
@@ -437,6 +443,16 @@ box-shadow: 3px 6px 7px -2px rgba(4,3,26,0.68);
   justify-content: center;
   align-items: center;
   /* background-color: var(--first-color); */
+}
+.nuestros-valores{
+  width: 100%;
+  
+  height: auto;
+  display: inline-block;
+font-size: var(--medium-font-size);
+font-weight: 800;
+color: var(--first-color);
+text-align: center;
 }
 /* .about__container2, .about__data{
  max-width: 50%;
@@ -559,8 +575,8 @@ box-shadow: 3px 6px 7px -2px rgba(4,3,26,0.68);
 }
 .iconBox__one h2{
   padding: 20px;
-  font-size: 98%;
-  font-weight: 900;
+  font-size: var(--medium-font-size);
+  font-weight: 700;
   color: var(--first-color-second);
 }
 /* .value-box__one p{
@@ -638,12 +654,13 @@ width: 80vw;
   text-align: center;
 }
 .invest__container {
+  width: 100vw;
+  height: 100vh;
   position: relative;
-  /* margin-top: -70%; */
-  /* height: calc(100vh - var (--header-height)); */
   align-content: center;
   align-items: center;
   row-gap: 3rem;
+  /* top: 2rem; */
 }
 .investt__container{
   grid-template-columns: repeat(2, 1fr);
@@ -667,6 +684,22 @@ width: 80vw;
   font-weight: 900;
   text-shadow: 0px 3px 2px rgba(34, 16, 4, 0.76);
 }
+.invest__info__banner{
+  display: inline-block;
+  width: 80vw;
+  background-color: var(--first-color);
+  height: 3.5rem;
+  font-size: var(--medium-font-size);
+  text-transform: uppercase;
+  font-weight: 600;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-left: calc(100vw - 88%);
+  top: 50%;
+  color: var(--second-color);
+}
+
 .invest__item{
   display: flex;
   flex-direction: column-reverse;
@@ -779,10 +812,10 @@ width: 80vw;
   overflow: var(--img-hidden);
 }
 
-.experience__overlay:nth-child(1) {
+/* .experience__overlay:nth-child(1) {
   width: 263px;
   margin-right: 2rem;
-}
+} */
 
 .experience__overlay:nth-child(2) {
   width: 120px;
@@ -1057,6 +1090,254 @@ width: 80vw;
   background-color: var(--text-color-light);
 }
 
+/*===============CONTACT FOrM======================*/
+.ContactusPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white;  
+}
+.ContactusPage::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  Left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgb(243, 243, 243);
+}
+.ContactusInfoContainer{
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000;
+  background: var(--second-color);
+  
+}
+
+.ContactInfo{
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background: var(--first-color);
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow:0 20px 25px rgba(0,0,0,0.15);
+}
+
+.ContactInfoH2{
+  color:#fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.InfoUl{
+  position: relative;
+  margin: 20px 0;
+}
+.InfoLi{
+  position: relative;
+  List-style: none;
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+  align-items: flex-start;
+}
+.SpanSymbol:nth-child(1){
+  width: 30px;
+  min-width: 30px;
+}
+.SpanSymbol:nth-child(1){
+  max-width: 100%;
+  filter: invert(1);
+}
+.SpanDescription:nth-child(2){
+  color:#fff;
+  margin-left: 10px;
+  font-weight: 300;
+}
+
+.SocialContactInfo{
+  position: relative;
+  display: flex;
+}
+.SocialContainerLi{
+  list-style: none;
+  margin-right: 15px;
+}
+
+.LinkSciA{
+  text-decoration: none;
+}
+.IconSciImg{
+  width: 30px;
+  min-width: 30px;
+  max-width: 100%;
+  filter: invert(1);
+}
+
+
+.ContactForm{
+  display: block;
+  position: absolute;
+  padding: 70px 50px;
+  padding-left: 250px;
+  margin-left: 150px;
+  width: calc(100% - 150px);
+  height: 100%;
+  background:#fff;
+  box-shadow: 8 50px 50px rgba(0,0,0,0.25);
+}
+.ContactFormH2{
+  color: #0f3959;
+  font-size: 24px;
+  font-weight: 500;
+}
+.ContactFormBox{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.ContactInputBox{
+  position: relative;
+  margin-bottom: 35px;
+}
+.ContactInputBox.w50{
+  width: 47%;
+
+}
+.ContactInputBox.w100{
+  width: 100%;
+}
+.ContactInput,
+.ContactTextArea{
+  width:100%;
+  resize: none;
+  padding: 5px 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #777;
+}
+.ContactTextArea{
+  height: 120px;
+}
+.ContactSpanText{
+  position: absolute;
+  Left: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: 0.3s;
+}
+.ContactInput:focus~.ContactSpanText,
+.ContactInput:valid~.ContactSpanText,
+.ContactTextArea:focus~.ContactSpanText,
+.ContactTextArea:valid~.ContactSpanText{
+  transform: translateY(-20px);
+  font-size: 12px;
+  font-weight: 400;
+  Letter-spacing: 1px;
+  color: var(--first-color-second);
+  font-weight: 500;
+}
+.ContactInput[type="submit"]{
+  position: relative;
+  cursor: pointer;
+  background: var(--first-color-alt);
+  color:#fff;
+  border: none;
+  max-width: 150px;
+  padding: 12px;
+  float: right;
+}
+.ContactInput:hover{
+  background: var(--second-color);
+}
+/*Responsive*/
+@media (max-width: 1200px)
+  {
+  .ContactusInfoContainer{
+  width: 90%;
+  min-width: auto;
+  margin: 20px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.2);
+}
+.ContactInfo {
+
+top: 0;
+height: 500px;
+position: relative;
+box-shadow: none;
+}
+.ContactForm{
+  position: relative;
+  width: calc(100% - 350px);
+  padding-left: 0;
+  margin-left: 0;
+  padding: 40px;
+  height: 550px;
+  box-shadow: none;
+}
+}
+@media (max-width: 991px)
+{
+.ContactusPage{
+background: #fff38e;
+}
+.ContactusPage::before{
+  display: none;
+  }
+  
+
+.ContactusInfoContainer{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.ContactForm{
+  width:100%;
+  height: auto;
+}
+.ContactInfo{
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+}
+.SocialContactInfo{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
+
+@media (max-width: 600px){
+.ContactForm{
+  padding:25px;
+  }
+.ContactInfo{
+  padding:25px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.SocialContactInfo{
+  margin-top: 40px;
+}
+.ContactInputBox.w50{
+  width:100%;
+}
+}
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices */
 @media screen and (min-width: 341px) and (max-width: 567px){
@@ -1066,6 +1347,18 @@ width: 80vw;
   }
   .invest__data-subtitle{
     font-size: 1rem;
+  }
+  .home__data-subtitle{
+    font-size: 1.3rem;
+  }
+  .home__data-title{
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  .invest__info__banner{
+    margin-left: calc(100vw - 94%);
+    font-size: 1.5rem;
+    height: 2.4rem;
   }
    
   }
@@ -1097,11 +1390,25 @@ width: 80vw;
   .invest__data-subtitle{
     font-size: 1rem;
   }
+  .home__data-subtitle{
+    font-size: 1.3rem;
+  }
+  .home__data-title{
+    font-size: 2rem;
+    font-weight: 900;
+  }
    
 }
 
 /* For medium devices */
 @media screen and (min-width: 568px) {
+  /* .home__data-subtitle{
+    font-size: 1.3rem;
+  }
+  .home__data-title{
+    font-size: 2rem;
+    font-weight: 900;
+  } */
   .video__container {
     display: grid;
     grid-template-columns: .6fr;
@@ -1119,6 +1426,11 @@ width: 80vw;
   }
   .invest__data-subtitle{
     font-size: 1.5rem;
+  }
+  .invest__info__banner{
+    margin-left: 50px;
+    font-size: 1.5rem;
+    height: 2.4rem;
   }
    
 }
@@ -1215,7 +1527,7 @@ width: 80vw;
   }
   .experience__overlay:nth-child(1) {
     width: 363px;
-    margin-right: 4rem;
+    /* margin-right: 4rem; */
   }
   .experience__overlay:nth-child(2) {
     width: 160px;
@@ -1241,7 +1553,12 @@ width: 80vw;
   .invest__data-subtitle{
     font-size: 2.5rem;
   }
-   
+  .invest__info__banner{
+    width: 95vw;
+    margin-left: 16px;
+    font-size: 1.5rem;
+    height: 2.4rem;
+  }
   
 }
 
@@ -1281,7 +1598,7 @@ width: 80vw;
   }
   .experience__overlay:nth-child(1) {
     width: 463px;
-    margin-right: 7rem;
+  /*   margin-right: 7rem; */
   }
   .experience__overlay:nth-child(2) {
     width: 220px;
@@ -1301,6 +1618,12 @@ width: 80vw;
   }
   .footer__content {
     justify-items: center;
+  }
+  .invest__info__banner{
+    width: 85vw;
+    margin-left: 100px;
+    font-size: 2.5rem;
+    height: 3.4rem;
   }
 }
 
