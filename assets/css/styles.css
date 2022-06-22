@@ -1116,7 +1116,7 @@ width: 80vw;
   min-width: 1100px;
   min-height: 550px;
   display: flex;
-  z-index: 1000;
+  z-index: 98;
   background: var(--second-color);
   
 }
@@ -1165,6 +1165,7 @@ width: 80vw;
   color:#fff;
   margin-left: 10px;
   font-weight: 300;
+  font-size: 14px;
 }
 
 .SocialContactInfo{
@@ -1178,6 +1179,7 @@ width: 80vw;
 
 .LinkSciA{
   text-decoration: none;
+  color: white;
 }
 .IconSciImg{
   width: 30px;
@@ -1358,6 +1360,11 @@ background: #fff38e;
   .home__data-title{
     font-size: 2rem;
     font-weight: 900;
+  }
+  .home__data-subtitle h1{
+    font-size: 1.18rem;
+    color: var(--white-color);
+    text-shadow:-2px 1px 2px 0px rgba(9,5,38,0.6);
   }
   .invest__info__banner{
     margin-left: calc(100vw - 94%);

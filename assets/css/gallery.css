@@ -34,24 +34,23 @@
   flex-direction: column;
   background: rgba(255, 255, 255, 0.425);
   padding: 0 4px;
-  opacity: 100%;
+  margin-top: -60px;
   transition: all 0.3s ease;
   
 
 }
-.title-project:hover{
-opacity: 0%;
 
-}
 .title-project h1,p{
   font-size: 12px;
   color: hsl(39, 100, 50);
-  margin-top: 10px;
+  margin-top: 2px;
+  margin-right: 10px;
 }
 .columna {
  flex: 20%;
  max-width: 20%;
  padding: 0 4px;
+ padding-top: 80px;
 }
 .columna img {
  margin-top: 8px;
@@ -65,13 +64,11 @@ opacity: 0%;
 .columna img:hover {
  cursor: pointer;
  filter: grayscale(0%);
- box-shadow: 0 0 10px 0;
- background-color: rgba(0, 0, 0, 0.5);
+ /* box-shadow: 0 0 10px 0; */
+ background-color: rgb(233, 233, 233);
  transform: scale(1.1);
 }
-.columna img:nth-child(2){
-  padding-top: 70px;
-}
+
 .overlay {
  position: fixed;
  left: 0;
@@ -153,6 +150,7 @@ opacity: 0%;
  .columna {
    flex: 50%;
    max-width: 50%;
+   padding-top: 100px;
  }
  .botones {
    font-size: 55px;
@@ -166,10 +164,20 @@ opacity: 0%;
  .slideshow img {
    width: 98%;
  }
+ .title-project { 
+  max-width: 50%;
+  margin-top: -50px;
+}
 }
 @media screen and (max-width: 600px) {
  .columna {
    flex: 100%;
    max-width: 100%;
+   padding-top: 100px;
  }
+ .title-project { 
+  max-width: 98%;
+  margin-top: -50px;
+}
+
 }
